@@ -31,3 +31,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Git
 alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Zathura thing
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
