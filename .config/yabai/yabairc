@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Window Appearance
+
+yabai -m config external_bar                all:38:0
+yabai -m config window_border               on
+yabai -m config window_border_width         4
+yabai -m config window_border_radius        0
+yabai -m config window_shadow               off
+yabai -m config window_animation_duration   0.2
+yabai -m config window_animation_frame_rate 120
+yabai -m config window_placement            second_child
+yabai -m config window_opacity              on
+yabai -m config window_opacity_duration     0.2
+yabai -m config active_window_opacity       1.0
+yabai -m config normal_window_opacity       0.9
+
+# Padding and Layout
+
+yabai -m config layout         bsp
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+# Mouse controls
+
+yabai -m config mouse_modifier        fn
+yabai -m config mouse_action1         move
+yabai -m config mouse_action2         resize
+yabai -m config mouse_drop_action     swap
+
+# Rules
+
+yabai -m rule --add app="(Digital Colour Meter|Finder|System Settings|Pomotroid)" manage=off
+yabai -m rule --add app="Messages" manage=off
+
+yabai -m rule --add app="^Discord$" space=6
+yabai -m rule --add app="Spotify" space=5
