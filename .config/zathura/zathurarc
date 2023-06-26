@@ -1,0 +1,8 @@
+set recolor true
+set recolor-keephue true
+# set recolor-darkcolor "#DCD7BA"
+# set recolor-lightcolor "#1F1F28"
+set recolor-darkcolor "#bdbdbd"
+set recolor-lightcolor "#151515"
+
+set page-padding 10
