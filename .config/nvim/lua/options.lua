@@ -67,3 +67,5 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fo', builtin.oldfiles, {})
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
+
+vim.cmd("noremap <leader>c <cmd>TermExec cmd='g++-13 -O3 -march=native %; ./a.out' <cr>") -- Compile with G++
