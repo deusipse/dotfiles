@@ -116,8 +116,12 @@ snippet != "equals" iA
 \neq 
 endsnippet
 
-snippet lr "left( right)" i
+snippet lra "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
+endsnippet
+
+snippet lrq "left( right)" iA
+\left[ ${1:${VISUAL}} \right]$0
 endsnippet
 
 snippet lim "limit" w
@@ -173,7 +177,7 @@ endsnippet
 priority 300
 context "math()"
 snippet dint "integral" wA
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+\int_{$1}^{$2} $0
 endsnippet
 
 priority 200
